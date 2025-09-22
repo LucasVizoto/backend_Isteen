@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy.engine import Engine
 from src.models.sqlite.settings.connection import db_connection_handler
 
-#@pytest.mark.skip(reason="interacao com o banco")
+@pytest.mark.skip(reason="interacao com o banco")
 def test_connect_to_db():
     assert db_connection_handler.get_engine() is None
 
