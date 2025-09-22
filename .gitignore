@@ -1,1 +1,8 @@
 /venv
+/database
+
+.env
+
+#Pycache files
+**/__pycache__
+.pytest_cache
