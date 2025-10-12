@@ -13,9 +13,20 @@ class GameEntity(Base):
     url_image_game = Column(String, nullable = False)
     developer = Column(String, nullable = False)
 
-def __repr__(self):
-    return f"GameEntity [id={self.id}, name={self.game_name}, \
-        description={self.game_description}, release_date={self.release_date}, \
-            url_game={self.url_game}, url_image_game={self.url_image_game}, \
-                developer={self.developer}]"
-    
+
+    def to_dict(self):
+        """Converte a entidade GameEntity para um dicionário."""
+        return {
+            "id": self.id,
+            "game_name": self.game_name,
+            "game_description": self.game_description,
+            "release_date": self.release_date,
+            "url_game": self.url_game,
+            "url_image_game": self.url_image_game,
+            "developer": self.developer
+        }
+    def __repr__(self):
+        return f"GameEntity [id={self.id}, name={self.game_name}, \
+            description={self.game_description}, release_date={self.release_date}, \
+                url_game={self.url_game}, url_image_game={self.url_image_game}, \
+                    developer={self.developer}]"
