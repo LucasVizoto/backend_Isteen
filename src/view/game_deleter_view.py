@@ -11,7 +11,7 @@ class GameDeleterView(ViewInterface):
         self.__controller = controller
 
     def handle_request(self, request: HttpRequest) -> HttpResponse:
-        game_id = request.path_params["game_id"]
+        game_id = request.params["id"]
         self.__controller.delete_game(game_id)
 
         return HttpResponse(status_code = 204)
