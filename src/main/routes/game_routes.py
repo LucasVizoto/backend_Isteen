@@ -2,10 +2,10 @@ from flask import Blueprint, jsonify, request
 from src.main.http_types.http_request import HttpRequest
 from src.errors.error_handler import handle_error
 
-from src.main.composer.game_finder_composer import game_finder_composer
-from src.main.composer.game_lister_composer import game_lister_composer
-from src.main.composer.game_creator_composer import game_creator_composer
-from src.main.composer.game_deleter_composer import game_deleter_composer
+from src.main.composer.games.game_finder_composer import game_finder_composer
+from src.main.composer.games.game_lister_composer import game_lister_composer
+from src.main.composer.games.game_creator_composer import game_creator_composer
+from src.main.composer.games.game_deleter_composer import game_deleter_composer
 
 game_routes_bp = Blueprint('games_routes', __name__)
 
